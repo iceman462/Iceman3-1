@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07070a">
+<title>BIGGEST EMPIRE | eFootball Updates</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@500;600;700&display=swap');
+:root{--bg:#06070a;--card:#101217;--card2:#151820;--gold:#ffd21c;--gold2:#ff9f00;--white:#f7f7f8;--muted:#9aa1ad;--line:#252a34;--green:#25d366}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Rajdhani,Arial,sans-serif;font-size:17px}a{color:inherit}
+.header{position:sticky;top:0;z-index:50;background:rgba(6,7,10,.92);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+.navbar{max-width:1200px;margin:auto;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-family:Orbitron,sans-serif;font-size:18px;font-weight:900;text-decoration:none;letter-spacing:.5px}.logo b{color:var(--gold)}.menu{display:flex;gap:22px;align-items:center}.menu a{text-decoration:none;color:#cbd0d8;font-weight:700;font-size:15px}.menu a:hover{color:var(--gold)}.menu-btn{display:none;background:none;color:white;border:1px solid var(--line);border-radius:9px;font-size:23px;padding:5px 10px}
+.hero{min-height:650px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 35%,rgba(255,184,0,.15),transparent 28%),linear-gradient(135deg,#06070a,#0b0e14)}
+.hero:after{content:"";position:absolute;inset:auto -10% -45% -10%;height:55%;background:linear-gradient(transparent,rgba(255,210,28,.05));transform:rotate(-4deg)}
+.hero-inner{max-width:1200px;width:100%;margin:auto;padding:80px 20px;display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center;position:relative;z-index:2}
+.kicker{color:var(--gold);font-weight:800;letter-spacing:4px;font-size:13px}.hero h1{font-family:Orbitron,sans-serif;font-size:clamp(48px,8vw,92px);line-height:.95;margin:14px 0 22px;letter-spacing:-3px}.hero h1 span{color:var(--gold)}.hero p{color:var(--muted);font-size:21px;max-width:650px;margin:0 0 30px}.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;font-weight:800;padding:13px 20px;border-radius:10px;border:1px solid var(--line);transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--gold);color:#111;border-color:var(--gold)}.dark{background:#11151c}.wa{background:var(--green);color:#071008;border-color:var(--green)}
+.hero-art{height:330px;border-radius:30px;border:1px solid #403716;background:linear-gradient(145deg,#1c190f,#0c0f15);display:grid;place-items:center;box-shadow:0 25px 80px rgba(0,0,0,.45)}.hero-art .ball{font-size:120px;filter:drop-shadow(0 10px 25px rgba(255,210,28,.15))}.hero-art strong{font-family:Orbitron;font-size:13px;color:var(--gold);letter-spacing:2px}
+.section{max-width:1200px;margin:auto;padding:85px 20px}.section.dark-section{max-width:none;background:#0a0c11}.section-inner{max-width:1200px;margin:auto}.heading{margin-bottom:35px}.heading small{color:var(--gold);font-weight:900;letter-spacing:3px}.heading h2{font-family:Orbitron;font-size:clamp(28px,5vw,46px);margin:7px 0}.heading p{color:var(--muted);max-width:700px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-5px);border-color:#554819}.thumb{height:190px;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#3a3217,#10131a 55%);font-family:Orbitron;color:#686f7b;font-size:15px;letter-spacing:2px}.card-body{padding:20px}.tag{font-size:11px;color:var(--gold);letter-spacing:2px;font-weight:900}.card h3{font-family:Orbitron;font-size:19px;margin:8px 0}.card p{color:var(--muted);margin:0}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.gallery .pic{height:190px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(145deg,#171b23,#0d1015);display:grid;place-items:center;color:#68717e;font-weight:800}
+.community{background:linear-gradient(100deg,#181306,#0b0d12);border:1px solid #3a321c;border-radius:22px;padding:45px;display:flex;align-items:center;justify-content:space-between;gap:25px}.community h2{font-family:Orbitron;margin:5px 0}.community p{color:var(--muted);margin:0}
+.login{max-width:600px;margin:auto;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:42px}.lock{font-size:48px}.login h3{font-family:Orbitron}.login p{color:var(--muted)}.warning{font-size:12px;color:#777f8b;margin-top:18px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:25px}.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px}.panel p{color:var(--muted)}.panel h3{font-family:Orbitron}.footer{border-top:1px solid var(--line);padding:40px 20px;text-align:center;color:var(--muted)}.footer strong{font-family:Orbitron;color:#fff}.footer a{color:var(--gold);text-decoration:none}
+.float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#071008;text-decoration:none;font-size:27px;z-index:40;box-shadow:0 12px 35px rgba(0,0,0,.45)}
+@media(max-width:850px){.menu-btn{display:block}.menu{display:none;position:absolute;top:65px;left:0;right:0;padding:18px 20px;background:#090b10;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.menu.open{display:flex}.hero-inner{grid-template-columns:1fr}.hero-art{height:230px}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}.community,.about{display:grid;grid-template-columns:1fr}.section{padding:65px 20px}}
+@media(max-width:500px){.hero h1{font-size:50px}.hero p{font-size:18px}.gallery{grid-template-columns:1fr}.community{padding:28px}.buttons .btn{width:100%;text-align:center}}
+</style>
+</head>
+<body>
+<header class="header">
+<nav class="navbar">
+<a class="logo" href="#home">⚡ <b>BIGGEST</b> EMPIRE</a>
+<button class="menu-btn" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button>
+<div class="menu">
+<a href="#home">Home</a><a href="#updates">Updates</a><a href="#gallery">Gallery</a><a href="#community">Community</a><a href="#login">Login</a><a href="#about">About</a>
+</div>
+</nav>
+</header>
+
+<section class="hero" id="home"><div class="hero-inner">
+<div>
+<div class="kicker">WELCOME TO THE EMPIRE</div>
+<h1>BIGGEST<br><span>EMPIRE</span></h1>
+<p>The home of eFootball updates, game news, screenshots, community content and everything happening in the Empire.</p>
+<div class="buttons"><a class="btn primary" href="#updates">⚡ Latest Updates</a><a class="btn dark" href="#community">👥 Join Community</a></div>
+</div>
+<div class="hero-art"><div><div class="ball">⚽</div><strong>PLAY • UPDATE • CONNECT</strong></div></div>
+</div></section>
+
+<section class="section" id="updates"><div class="heading"><small>LATEST NEWS</small><h2>eFootball Updates</h2><p>Post your newest eFootball news, events, player updates and announcements here.</p></div>
+<div class="cards">
+<article class="card"><div class="thumb">YOUR UPDATE IMAGE</div><div class="card-body"><span class="tag">NEWS</span><h3>New eFootball Update</h3><p>Replace this with your latest update and add your own picture.</p></div></article>
+<article class="card"><div class="thumb">YOUR UPDATE IMAGE</div><div class="card-body"><span class="tag">EVENT</span><h3>Latest Events</h3><p>Share campaigns, matches, challenges and important dates.</p></div></article>
+<article class="card"><div class="thumb">YOUR UPDATE IMAGE</div><div class="card-body"><span class="tag">TIPS</span><h3>Gameplay Tips</h3><p>Share formations, tactics and useful tips with the community.</p></div></article>
+</div></section>
+
+<section class="section dark-section" id="gallery"><div class="section-inner"><div class="heading"><small>YOUR MEDIA</small><h2>Gallery</h2><p>Add your eFootball screenshots and pictures here.</p></div><div class="gallery"><div class="pic">IMAGE 01</div><div class="pic">IMAGE 02</div><div class="pic">IMAGE 03</div><div class="pic">IMAGE 04</div></div></div></section>
+
+<section class="section" id="community"><div class="community"><div><div class="kicker">THE EMPIRE</div><h2>Join Our Community</h2><p>Chat with BIGGEST EMPIRE members and get updates directly on WhatsApp.</p></div><a class="btn wa" target="_blank" href="https://wa.me/232502277502?text=Hello%20BIGGEST%20EMPIRE%2C%20I%20want%20to%20join%20the%20community.">💬 Join WhatsApp</a></div></section>
+
+<section class="section" id="login"><div class="heading" style="text-align:center;margin-left:auto;margin-right:auto"><small>ACCOUNT ACCESS</small><h2>eFootball Login</h2><p style="margin:auto">For security, use the official KONAMI service for your eFootball account. BIGGEST EMPIRE never asks for your KONAMI password.</p></div><div class="login"><div class="lock">🔐</div><h3>Official eFootball / KONAMI Login</h3><p>Continue to the official service to sign in securely.</p><a class="btn primary" target="_blank" rel="noopener noreferrer" href="https://my.konami.net/">Open Official Login</a><div class="warning">Never share your KONAMI password with BIGGEST EMPIRE or anyone claiming to be an agent.</div></div></section>
+
+<section class="section dark-section" id="about"><div class="section-inner"><div class="heading"><small>ABOUT WEBSITE</small><h2>About BIGGEST EMPIRE</h2></div><div class="about"><div class="panel"><h3>⚽ eFootball Community</h3><p>BIGGEST EMPIRE is a fan community for sharing eFootball updates, images, events and gaming content.</p></div><div class="panel"><h3>💻 Need a Website?</h3><p>If you need a website for your business, group, brand or personal project, send us a DM on WhatsApp.</p><a class="btn wa" target="_blank" href="https://wa.me/233545274761?text=Hello%20BIGGEST%20EMPIRE%2C%20I%20need%20a%20website.">💬 +233 54 527 4761</a></div></div></div></section>
+
+<a class="float" target="_blank" href="https://wa.me/233545274761?text=Hello%20BIGGEST%20EMPIRE%21" aria-label="WhatsApp">💬</a>
+<footer class="footer"><strong>⚡ BIGGEST EMPIRE</strong><p>eFootball Updates • Community • Gaming</p><p><a target="_blank" href="https://wa.me/232502277502">WhatsApp: +232 50 227 7502</a> · <a target="_blank" href="https://wa.me/233545274761">+233 54 527 4761</a></p><small>© 2026 BIGGEST EMPIRE</small></footer>
+</body>
+</html>
